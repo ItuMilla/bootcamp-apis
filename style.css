@@ -1,0 +1,86 @@
+.body {
+    background-color: orange;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.message {
+    padding: 1em;
+    background-color: pink;
+    margin-bottom: 1em;
+  }
+  
+  .btn {
+    border-radius: 0.2em;
+    margin: 1em .5em 1em .5em;
+    width: 25%;
+    height: 25%; 
+  }
+  button {
+    border-radius: 0.2em;
+    margin: 1em .5em 1em .5em;
+    width: 25%;
+    height: 25%;
+  }
+
+  .input > label {
+      display: inline-block;
+      width: 15em;
+      padding: 0.5em;
+      font-weight: bold;
+  }
+
+  .input > input[type="text"] {
+      padding: 0.5em;
+      margin: 0.5em;
+  }
+
+
+.widgets {
+    background-color: lightseagreen;
+    border-radius: 0.5em;
+    display: flex;
+}
+.btn{
+    width: 9em;
+}
+
+.widget {
+    flex: 1;
+    border: 1px solid lightgrey;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+
+h1 {
+    text-align: center;
+    background-color: lightseagreen;
+    border-radius: 0.5em;
+}
+
+@media(min-width:960px){
+    .widgets{
+        display: flex;   
+    }
+    body {
+        background-color: brown ;
+    }   
+}
+
+
+@media (min-width: 500px){
+    body { 
+   background-color:pink;
+}
+}
+
+
+    
+span {
+    background-color: pink;
+  }
+  
+  span>span {
+    margin: .5em;
+  }
