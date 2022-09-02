@@ -26,7 +26,7 @@ app.get('/api/word_game', function(req, res){
 
 }); 
     
-    const PORT = 6007;
+    const PORT = process.env.PORT|| 6007;
     app.listen(PORT, function(){
       console.log('api started on port', PORT)  
     })
