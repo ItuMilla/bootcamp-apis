@@ -1,25 +1,14 @@
-.body {
-    background-color: orange;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.const {
+    padding: 0.5em;
+    margin: 0,1em;
+    font-style: normal;
+    
 }
 
 .message {
     padding: 1em;
     background-color: pink;
     margin-bottom: 1em;
-  }
-  
-  .btn {
-    border-radius: 0.2em;
-    margin: 1em .5em 1em .5em;
-    width: 25%;
-    height: 25%; 
-  }
-  button {
-    border-radius: 0.2em;
-    margin: 1em .5em 1em .5em;
-    width: 25%;
-    height: 25%;
   }
 
   .input > label {
@@ -40,13 +29,10 @@
     border-radius: 0.5em;
     display: flex;
 }
-.btn{
-    width: 9em;
-}
 
 .widget {
     flex: 1;
-    border: 1px solid lightgrey;
+    border: 1px solid lightseagreen;
     margin: 1em;
     padding: 1em;
     border-radius: 0.5em;
@@ -62,9 +48,6 @@ h1 {
 @media(min-width:960px){
     .widgets{
         display: flex;   
-    }
-    body {
-        background-color: brown ;
     }   
 }
 
@@ -74,8 +57,6 @@ h1 {
    background-color:pink;
 }
 }
-
-
     
 span {
     background-color: pink;
@@ -83,4 +64,8 @@ span {
   
   span>span {
     margin: .5em;
+  }
+  
+  body {
+    background-color: bisque;
   }

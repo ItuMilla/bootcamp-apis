@@ -1,7 +1,7 @@
 export default function enoughAirtime(projectedUsage, airtimeAvailable){
-    var call = 1.88;
-    var data =12;
-    var sms = 0.75;
+    var call = 1;
+    var data =1;
+    var sms = 10.00;
     let airtimeUsed = 0;
     var projectedAirtimeUsage=projectedUsage.split(',');
     console.log(projectedAirtimeUsage);
