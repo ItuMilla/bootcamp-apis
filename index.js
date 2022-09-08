@@ -4,7 +4,7 @@ import longestWord from './bootcamp/longestWord.js'
 import shortestWord from './bootcamp/shortestWord.js'
 import wordLengths from './bootcamp/wordLengths.js'
 import totalPhoneBill from './bootcamp/totalPhoneBill.js'
-// import enoughAirtime from './bootcamp/enoughAirtime.js';
+import enoughAirtime from './bootcamp/enoughAirtime.js'
 
 
 const app = express();
@@ -57,7 +57,7 @@ app.get("/api/phonebill/total", function(req, res){
         const projectedUsage = req.body.projectedUsage
         const available = req.body.available
        // console.log(reg.body)
-       console.log(enoughArtime(projectedUsage, avaliable))
+       console.log(enoughArtime(projectedUsage, available))
        res.json({
         result : enoughAirtime(projectedUsage, available)
        });
