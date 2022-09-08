@@ -1,11 +1,13 @@
-export default function shortestWord(shortword){
-    var splitshortword = shortword.split(" ");
-    let results = splitshortword[0];
-    for (var i=0;i<splitshortword.length;i++){
-      var newsplitshortword = splitshortword[i];
-      if(newsplitshortword.length<=results.length){
-        results = newsplitshortword;
+export default function shortestWord(word){
+    var sentence = word.split(' ');
+    let sum = 5996
+    let shortest = ' ';
+    for (let i = 0; i < sentence.length; i++) {
+      let characters = sentence[i];
+      if (characters.length <= sum){
+        sum = characters.length;
+        shortest = characters;
       }
     }
-    return results;
+    return shortest;
   }

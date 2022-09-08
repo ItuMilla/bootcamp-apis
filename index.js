@@ -1,15 +1,18 @@
 import express from 'express';
 
 import longestWord from './bootcamp/longestWord.js'
+
 import shortestWord from './bootcamp/shortestWord.js'
+
 import wordLengths from './bootcamp/wordLengths.js'
+
 // import totalPhoneBill from './bootcamp/totalPhoneBill.js'
 // import enoughAirtime from './bootcamp/enoughAirtime.js'
 
 
 const app = express();
 // app.use(cors());
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 app.get('/api/word_game', function(req, res){
 
