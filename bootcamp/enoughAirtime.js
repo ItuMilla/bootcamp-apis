@@ -1,20 +1,20 @@
-export default function enoughAirtime(projectedUsage, airtimeAvailable){
+export default function enoughAirtime(airtimeUsage, airtimeAvailable){
     var call = 1;
     var data =1;
     var sms = 10.00;
     let airtimeUsed = 0;
-    var projectedAirtimeUsage=projectedUsage.split(',');
-    console.log(projectedAirtimeUsage);
+    var airtimeUsage=airtimeUsage.split(',');
+    console.log(airtimeUsage);
   
-    for(var i=0; i<projectedAirtimeUsage.length; i++){
-      if(!projectedUsage){
+    for(var i=0; i<airtimeUsage.length; i++){
+      if(!airtimeUsage){
         return "please enter string"
       }
-      else if(projectedAirtimeUsage[i].startsWith('call')){
+      else if(airtimeUsage[i].startsWith('call')){
          airtimeUsed += call;
-      }else if(projectedAirtimeUsage[i].startsWith('sms')){
+      }else if(airtimeUsage[i].startsWith('sms')){
         airtimeUsed += sms;
-      }else if(projectedAirtimeUsage[i].startsWith('data')){
+      }else if(airtimeUsage[i].startsWith('data')){
         airtimeUsed += data;
       }
       }
