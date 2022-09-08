@@ -2,10 +2,11 @@ export default function longestWord(word) {
     var sentence = word.split(' ');
     let sum = 0
     let longest= '';
-    for(let i=0;i<sentence.length; i++){
+    for (let i = 0; i < sentence.length; i++) {
       let characters = sentence[i];
       if (characters.length >= sum) {
         sum = characters;
+        longest = characters;
       }
 
    }

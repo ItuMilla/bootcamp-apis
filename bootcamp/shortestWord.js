@@ -1,6 +1,6 @@
 export default function shortestWord(word){
     var sentence = word.split(' ');
-    let sum = 5996
+    let sum = 50
     let shortest = ' ';
     for (let i = 0; i < sentence.length; i++) {
       let characters = sentence[i];

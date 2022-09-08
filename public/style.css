@@ -27,16 +27,16 @@
 .widgets {
     background-color: lightseagreen;
     border-radius: 0.5em;
-    display: flex;
+    /* display: flex; */
 }
 
-.widget {
+/* .widget {
     flex: 1;
     border: 1px solid lightseagreen;
     margin: 1em;
     padding: 1em;
     border-radius: 0.5em;
-}
+} */
 
 
 h1 {

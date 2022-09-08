@@ -1,4 +1,35 @@
+Post http://localhost:6007/api/phonebill/total HTTP/1.1
+Content-Type: application/json
 
+{
+    "bill" : "call,sms,call,sms,sms,data,sms"
+}
+
+#####
+
+GET http://localhost:6007/api/phonebill/prices HTTP/1.1
+Content-Type: application/json
+
+######
+
+POST http://localhost:6007/api/phonebill/prices HTTP/1.1
+Content-Type: application/json
+
+{
+
+    "type" : "call",
+    "price" : "1.80"
+}
+
+########
+
+POST http://localhost:6007/api/enoughAirtime HTTP/1.1
+Content-Type: application/json
+
+{
+    "airtimeUsage" : "call,sms,call,data",
+    "available" : "60"
+}
 
 
 

@@ -17,8 +17,10 @@
 <body>
     <h1> My API Widgets</h1>
 
-    <h2>Word Game Widget</h2>
+    <div class="widgets">
+    </div>
 
+    <h2>Word Game Widget</h2>
     <div class="widget" x-data="{
         sentence : '',
         longestWord : '',
@@ -34,7 +36,9 @@
                 this.shortestWord = result.data.shortestWord;
                 this.wordCount = result.data.sum;
                 setTimeout(()=>{
-                    this.billMessage='';
+                    this.longestWord='';
+                    this.shortestWord='';
+                    this.wordCount='';
                 },3000);
             });
         }
@@ -58,6 +62,65 @@
             Word count: <span x-text="wordCount"></span>
         </div>
     </div>
-</div>
+    div
 
+    <h2>Total Phone Bill Widget</h2>
+    <div class="widget"x-data="{
+        myBill:'',
+        billMessage:'',
+        phoneBill(){
+            axios
+            .get(`/api/phonebill/total?myBill=${this.myBill}`)
+            .then((result)=>{
+                this.billMessage=result.data.bill;
+                setTimeout(()=>{
+                    this.billMessage='';
+                },3000);
+                
+            });
+        }
+           
+        }">
+       
+        <div x-show="billMessage.length > 0" class="message" x-text="billMessage">
+            Your bill message will be displayed here....
+        </div>
+        <div class="input">
+            <label for="myBill">please enter a string: </label>
+            <input type="text" placeholder="call,sms" x-model="myBill" id="myBill">
+        </div>
+        <div class="cont"><button x-on:click="phoneBill">calculate bill</button></div>
+    </div>
+
+    <h2>Enough Airtime Widget</h2>
+
+    <div class="widget" x-data="{
+    sentence: '',
+    airtimeUsage: '',
+    availableAmount: '0'
+    airtimeMessage: 'Amount of airtime left...',
+
+});
+
+setimeout(() => {
+    this.airtimeUsage = '';
+    this.airtimeAvailable = '';
+    this.airtimeMessage = '',
+},3000)
+},
+
+}">
+        <div x-show="billMessage.length>0" class="message" x-text="billMessage">
+            Your total bill will be displayed here ...
+         </div>
+        <div class="input ">
+
+            <label for="bill"> Please enter your bill: </label>
+            <input type="text" id="bill" placeholder="items here" x-model="itemUsed">
+        </div>
+        <div>
+            <button class="btn" x-on:click="billDue"> Check bill</button>
+        </div>
+    </div>
+</div>
 </html>
